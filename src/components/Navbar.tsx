@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, logopng, menu, close } from "../assets";
+import { logo, logopng, menu, close, nlogo } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -21,12 +21,28 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logopng} alt="Logo" className="w-9 h-9 object-contain" />
+          <img src={nlogo} alt="Logo" className="w-9 h-9 object-contain" />
           <p className="text-white text-[18px] font-bold cursor-pointer">
             Nishant Pandey{" "}
             <span className="sm:block hidden">| Full Stack Developer</span>
           </p>
         </Link>
+        <ul className="list-none hidden sm:flex flex-row gap-10">
+          {navLinks.map((link) => (
+            <li
+              key={link.id}
+              className={`${
+                active === link.title ? "text-white" : "text-secondary"
+              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              onClick={() => setActive(link.title)}
+            >
+              <a href={`#${link.id}`}>{link.title}</a>
+            </li>
+          ))}
+        </ul>
+        <div className="sm:hidden flex flex-1 justify-end items-center">
+          <img src={menu} alt="menu" />
+        </div>
       </div>
     </nav>
   );
