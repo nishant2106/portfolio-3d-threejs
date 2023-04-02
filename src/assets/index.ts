@@ -25,6 +25,9 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import krixi from "./company/krixi.png";
+import innothoughts from "./company/inno-logo.png";
+import carefi from "./company/carefi.svg";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -63,4 +66,7 @@ export {
   tripguide,
   logopng,
   nlogo,
+  krixi,
+  innothoughts,
+  carefi,
 };

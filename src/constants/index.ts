@@ -15,14 +15,13 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
   carrent,
   jobit,
   tripguide,
   threejs,
+  krixi,
+  innothoughts,
+  carefi,
 } from "../assets/index";
 
 export const navLinks = [
@@ -118,7 +117,7 @@ const experiences = [
   {
     title: "Project Intern",
     company_name: "Krixi Corporations",
-    icon: starbucks,
+    icon: krixi,
     iconBg: "#383E56",
     date: "September 2021 - April 2022",
     points: [
@@ -130,7 +129,7 @@ const experiences = [
   {
     title: "SOFTWARE DEVELOPER INTERN",
     company_name: "INNOTHOUGHTS SYSTEMS",
-    icon: tesla,
+    icon: innothoughts,
     iconBg: "#E6DEDD",
     date: "Jan 2022 - July 2022",
     points: [
@@ -145,7 +144,7 @@ const experiences = [
   {
     title: "Full stack Developer",
     company_name: "CARE.FI",
-    icon: meta,
+    icon: carefi,
     iconBg: "#E6DEDD",
     date: "July 2022 - Present",
     points: [
