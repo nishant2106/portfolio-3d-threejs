@@ -1,6 +1,6 @@
 import React from "react";
 import { styles } from "../styles";
-import { github } from "../assets";
+import { github, website } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -14,6 +14,7 @@ const ProjectCard: React.FC<any> = ({
   tags,
   image,
   source_code_link,
+  hosted_link,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -27,22 +28,32 @@ const ProjectCard: React.FC<any> = ({
             alt={name}
             className="w-full h-full object-cover rounded-2xl"
           />
+
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={github}
-                alt="github"
-                className="w-1/2 h-1/2 object-contain"
-              />
-              {/* <img
-                src={github}
-                alt="live demo"
-                className="w-1/2 h-1/2 object-contain"
-              /> */}
-            </div>
+            {source_code_link ? (
+              <div
+                onClick={() => window.open(source_code_link, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              >
+                <img
+                  src={github}
+                  alt="github"
+                  className="w-1/2 h-1/2 object-contain"
+                />
+              </div>
+            ) : null}
+            {hosted_link ? (
+              <div
+                onClick={() => window.open(hosted_link, "_blank")}
+                className="yellow-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              >
+                <img
+                  src={website}
+                  alt="website"
+                  className="w-1/2 h-1/2 object-contain"
+                />
+              </div>
+            ) : null}
           </div>
         </div>
         <div className="mt-5">

@@ -34,6 +34,7 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import logopng from "./logo.png";
 import nlogo from "./n-logo.gif";
+import website from "./click.png";
 
 export {
   logo,
@@ -69,4 +70,5 @@ export {
   krixi,
   innothoughts,
   carefi,
+  website,
 };

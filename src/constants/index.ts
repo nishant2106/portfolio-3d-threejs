@@ -185,9 +185,9 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Guide Me Doc",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Built for Innothoughts as a Intern.UI developed using bootstrap and React. Responsive and Easy forms to get user's appointments and Hospital Management for admin and hospital to manage appointments and quotation from multiple hospitals.",
     tags: [
       {
         name: "react",
@@ -198,54 +198,57 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "nodejs",
         color: "pink-text-gradient",
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    hosted_link: "https://guidemedoc.com/",
+    // source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
+    name: "Blood Bank Management System",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Used mysql for backend database , Backend hosted using Railway App and database using PlanetScale  Advance concepts of SQL were used like indexing, PL-SQL, Procedure, etc..",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "nodejs",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "mysql",
         color: "pink-text-gradient",
+      },
+      {
+        name: "trigger",
+        color: "blue-text-gradient",
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/nishant2106/BloodBookBMS",
+    hosted_link: "https://bloodbook-nishant.netlify.app/",
   },
   {
     name: "Trip Guide",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Website to demonstrate multiple functionalities of ant design , responsiveness for different screen sizes.",
     tags: [
       {
-        name: "nextjs",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "antd",
         color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/nishant2106/tech",
+    hosted_link: "https://lucky-entremet-ec1a91.netlify.app/",
   },
 ];
 
