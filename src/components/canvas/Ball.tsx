@@ -13,8 +13,14 @@ interface BallProps {
 }
 const Ball: React.FC<BallProps> = ({ imageUrl }) => {
   const [decal] = useTexture([imageUrl]);
+  const dummyObj = {};
   return (
-    <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
+    <Float
+      speed={1.75}
+      rotationIntensity={1}
+      floatIntensity={2}
+      {...(dummyObj as any)}
+    >
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
       <mesh castShadow recieveShadow scale={2.75}>

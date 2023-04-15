@@ -9,15 +9,30 @@ const Stars = () => {
   const [sphere] = useState(() =>
     random.inSphere(new Float32Array(5000), { radius: 1.2 })
   );
+  const sphereFloat32Array = new Float32Array(sphere);
 
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 10;
-    ref.current.rotation.y -= delta / 15;
+    if (
+      ref.current &&
+      typeof ref.current === "object" &&
+      "rotation" in ref.current
+    ) {
+      const rotation = (ref.current as any).rotation;
+      rotation.x -= delta / 10;
+      rotation.y -= delta / 15;
+    }
   });
+  const dummyObj = {};
 
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
-      <Points ref={ref} positions={sphere} stride={3} frustumCulled>
+      <Points
+        ref={ref}
+        positions={sphereFloat32Array}
+        stride={3}
+        frustumCulled
+        {...(dummyObj as any)}
+      >
         <PointMaterial
           transparent
           color="#f272c8"
