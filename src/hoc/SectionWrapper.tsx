@@ -7,6 +7,7 @@ interface SectionWrapperProps {
   Component: React.ReactNode;
   idName: string;
 }
+
 const SectionWrapper = (Component: React.FC<{}>, idName: string) =>
   function HOC() {
     return (
